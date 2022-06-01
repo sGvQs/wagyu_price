@@ -1,12 +1,10 @@
+
 $(function(){
-  $('a[href="#"]').click(function() {
-    
-    //Get the value of an attribute for the first element in the set of matched elements. return String
-    let href = $(this).attr("href");
-    
-      $('body,html').animate({
-        scrollTop: $(href == "#" || href == "" ? 'html' : href).offset().top
-      }, 1000, 'swing');
-      return false;
-    });
+  $('#page-top').click(function(){
+    //offset()はHTML要素の表示位置を座標
+    // var position = $('html').offset().top;
+    // console.log(position);//0
+    $('body,html').animate({scrollTop:0}, 400, 'swing');
+    return false;
+     });
   });
